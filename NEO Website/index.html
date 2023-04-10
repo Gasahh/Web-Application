@@ -1,0 +1,281 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Neo Collection - The Best Sneakers In The World</title>
+    </head>
+    <body>
+        <header>
+            <div id="menu-bar" class="fa fa-bars"></div>
+            <a href="#" class="logo">NEO</a>
+            <nav class="navbar">
+                <a href="user_page.php">ACCOUNT</a>
+                <a href="#Home">Home</a>
+                <a href="#Contact">Contact</a>
+                <a href="#About">About</a>
+            </nav>
+            <div class="icons">
+                <a href="#"><i class="fa fa-heart"></i></a>
+                <a href="cart.php"><i class='bx bx-cart'></i></a>
+                <a href="register_form.php"><i class='bx bx-user'></i></a>
+            </div>
+        </header>
+        <!--Slide Image-->
+        <section class="home" id="Home">
+            <div class="slide-container active">
+                <div class="slide">
+                    <div class="content">
+                        <p>Air Jordan</p>
+                        <h3>Jordan 4 Retro Seafom</h3>
+                   
+                        <a href="cart.php" class="btn">Read Now</a>
+                    </div>
+                    <div class="image">
+                        <img src="image/slide1.jpg" class="shoe">
+                    </div>
+                </div>
+            </div>
+            <div class="slide-container">
+                <div class="slide">
+                    <div class="content">
+                        <p>Air Jordan</p>
+                        <h3>Jordan 1 Retro High 85</h3>
+                    
+                        <a href="cart.php" class="btn">Read Now</a>
+                    </div>
+                    <div class="image">
+                        <img src="image/slide2.png" class="shoe">
+                    </div>
+                </div>
+            </div>
+            <div class="slide-container">
+                <div class="slide">
+                    <div class="content">
+                        <p>Air Jordan</p>
+                        <h3>Jordan 1 Retro High OG</h3>
+                    
+                        <a href="cart.php" class="btn">Read Now</a>
+                    </div>
+                    <div class="image">
+                        <img src="image/slide3.png" class="shoe">
+                    </div>
+                </div>
+            </div>
+            <div class="slide-container">
+                <div class="slide">
+                    <div class="content">
+                        <p>Air Jordan</p>
+                        <h3>LOUIS VUITTON NIKE AIR FORCE 1 LOW</h3>
+                       
+                        <a href="cart.php" class="btn">Read Now</a>
+                    </div>
+                    <div class="image">
+                        <img src="image/slide4.png" class="shoe">
+                    </div>
+                </div>
+            </div>
+
+            <div id="prev"  class='bx bx-chevron-left' onclick="prev();"></div>
+            <div id="next" class='bx bx-chevron-right' onclick="next();"></div>
+        </section>
+
+        </div>
+       
+        <!--Contact-->
+        <section class="contact" id="Contact">
+        <div class="background">
+            <div class="container">
+              <div class="screen">
+                <div class="screen-body">
+                  <div class="screen-body-item left">
+                    <div class="app-title">
+                      <span>CONTACT</span>
+                      <span>US</span>
+                    </div>
+                    <div class="app-contact">CONTACT INFO : +60 11 11 223</div>
+                  </div>
+                  <div class="screen-body-item">
+                    <div class="app-form">
+                      <div class="app-form-group">
+                        <input class="app-form-control" placeholder="NAME" value="">
+                      </div>
+                      <div class="app-form-group">
+                        <input class="app-form-control" placeholder="EMAIL">
+                      </div>
+                      <div class="app-form-group">
+                        <input class="app-form-control" placeholder="CONTACT NO">
+                      </div>
+                      <div class="app-form-group message">
+                        <input class="app-form-control" placeholder="MESSAGE">
+                      </div>
+                      <div class="app-form-group buttons">
+                        <button class="app-form-button">CANCEL</button>
+                        <button class="app-form-button">SEND</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+            <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+            <script>
+                var swiper = new Swiper(".swiper",{
+                    loop:true,
+                    speed:800,
+                    effect:"fade",
+                    autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            }
+        
+                });
+        
+                document.querySelector(".open-icon i").addEventListener("click", function(){
+                    document.querySelector(".menu").classList.add("active");
+                })
+        
+                document.querySelector(".close-icon i").addEventListener("click", function(){
+                    document.querySelector(".menu").classList.remove("active");
+                })
+        
+                anime({
+                    targets:'.serial',
+                    scale:[2,1],
+                    opacity:[0,1],
+                    easeing:'easeInOutExpo',
+                })
+                anime({
+                    targets:'.info h1',
+                    translateX:[120,0],
+                    opacity:[0,1],
+                    easeing:'easeInOutExpo',
+                    delay:500,
+                })
+        
+                swiper.on('slideChangeTransitionStart',function (){
+        
+                    anime({
+                    targets:'.serial',
+                    scale:[2,1],
+                    opacity:[0,1],
+                    easeing:'easeInOutExpo',
+                })
+                anime({
+                    targets:'.info h1',
+                    translateX:[120,0],
+                    opacity:[0,1],
+                    easeing:'easeInOutExpo',
+                    delay:500,
+                })
+        
+                anime({
+                    targets:'.info a',
+                    translateX:[-120,0],
+                    opacity:[0,1],
+                    easeing:'easeInOutExpo',
+                    delay:700,
+                })
+        
+                })
+        
+                var swiper = new Swiper(".swiper",{
+                    loop:true,
+                    speed:1000,
+                    effect:"fade",
+                    autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            }
+        
+                })
+            </script>
+            </section>
+        <!--About-->
+        <section class="about" id="About">
+            <div class="section">
+                <div class="container">
+                    <div class="content-section">
+                        <div class="title">
+                            <h1>About us</h1>
+                        </div>
+                    <div class="content">
+                            <h3>
+                            <p>Sneaker originates from the word sneak, which translates as to walk stealthily about, 
+                            also related to stealing, in fact, thieves were known as sneaks. 
+                            The only inconsistency was that back then, shoes were mostly made of leather, 
+                            so that walking in them was noisy, thus passing unnoticed was out of the question. 
+                            Things changed when, in the 19th century, the first rubber-soled shoes appeared, 
+                            becoming the perfect choice to walk silently. That's exactly how the term sneaker originated</p></h3>
+                            <div class="button">
+                                <a href="">Read More</a>
+                            </div>
+                    </div>
+                    <div class="social">
+                        <a href="#"><i class="bx bxl-facebook"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="image-section">
+                    <img src="image/about.png">
+                </div>
+            </div>
+        </section>
+        <!--Footer-->    
+        <footer>
+            <div class="footer_main">
+                <div class="tag">
+                    <h1>Contact</h1>
+                    <a href="#"><i class="bx bx-home"></i>12/Kuala Lumpur/Malaysia</a>
+                    <a href="#"><i class="bx bx-phone"></i>+60 194317843</a>
+                    <a href="#"><i class="bx bx-envelope"></i>NeoCollection@gmail.com</a>
+                </div>
+    
+                <div class="tag">
+                    <h1>Get Help</h1>
+                    <a href="#" class="center">FAQ</a>
+                    <a href="#" class="center">Shipping</a>
+                    <a href="#" class="center">Returns</a>
+                    <a href="#" class="center">Payment Options</a>
+                </div>
+    
+                <div class="tag">
+                    <h1>Our Stores</h1>
+                    <a href="#" class="center">Malaysia</a>
+                    <a href="#" class="center">Singapore</a>
+                    <a href="#" class="center">Thailand</a>
+                    <a href="#" class="center">Japan</a>
+                </div>
+    
+                <div class="tag">
+                    <h1>Follow Us</h1>
+                    <div class="social_link">
+                        <a href="#"><i class="bx bxl-facebook"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                        <a href="#"><i class="bx bxl-linkedin"></i></a>                    
+                    </div>
+                </div>
+    
+                <div class="tag">
+                    <h1>Newsletter</h1>
+                    <div class="search_bar">
+                        <input type="text" placeholder="You email id here">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <h1>&#169; March 2023 Neo Collection. All right reserved</h1>
+        </footer>
+        
+    </body>
+</html>
+
+<script src="script.js"></script>
+
+   
